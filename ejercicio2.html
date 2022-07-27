@@ -1,0 +1,31 @@
+<script>
+
+    //Hola, aqui creo una funcion q permita recorrer el arreglo y que a la vez pueda ordenarlo de mayor a menor
+    //sin funcion sort  
+      function ordenarArreglo (num){
+   
+      for(let i = num.length+1; i >= 0; i--){
+         for(let j = num.length +i+1; j >= 0 ; j--){
+  
+              if(num[j]<num[j+1]){
+                  [num[j], num[j+1]]= [num[j+1], num[j]];
+                  
+              }
+           }
+          }
+      }
+      // luego tomando en cuenta lo q dice el enunciado declaro el arreglo y lo presento por consola
+      // confieso que lo de presentar solo numeros me tomo  mas tiempo q la propia funcion
+  
+      let inicio = ['unacadena',3,9,1,10,500,1,10, true]; 
+      let solonumero = inicio.filter(inicio=>Number.isInteger(inicio));
+               
+      console.log(inicio);
+      console.log();
+  
+      
+      // llamo a la funcion para q ordene el arreglo de los numeros, presento solo los enteros por consola
+      ordenarArreglo (solonumero);
+      console.log(solonumero);
+    
+  </script>
